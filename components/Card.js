@@ -12,7 +12,7 @@ const Card = ({ data, item }) => {
     setCount(count + 1);
     setHeart(true);
     const it = localStorage.getItem("heart");
-    console.log(it);
+
     localStorage.setItem("heart", it ? [it, data.id] : [data.id]);
     const values = { hearts: data.hearts + 1 };
     const res = await fetch(
