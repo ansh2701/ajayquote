@@ -1,18 +1,56 @@
-.container header {
-  background-color: aquamarine;
-  display: flex;
+.hero {
+  width: 100%;
+  font-family: "Roboto Mono", monospace;
+  margin: 0;
+  padding: 1vw 0vw 3vw;
   align-items: center;
-  justify-content: center;
-  height: 80px;
+  /* background-color: #000; */
+  background-color: #fff;
 }
-
-.container header h1 {
+.hero h1 {
+  text-align: center;
+  font-size: 5.5rem;
+  color: #000;
   margin: 0;
 }
 
-.main {
+.container {
+  background-color: #fff;
+  /* background-color: #191b1f; */
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0 5vw;
+}
+
+.inner {
+  margin: 0 auto;
+  max-width: 1040px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.postFeed {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin-top: 2rem;
+  margin: 0 -20px;
+  padding: 40px 0 5vw;
+}
+
+@media only screen and (max-width: 500px) {
+  .postFeed {
+    display: flex;
+    flex-wrap: wrap;
+    /* margin: 0 -20px;
+      padding: 40px 0 5vw; */
+    justify-content: center;
+    align-items: center;
+  }
+  .hero h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #fff;
+    margin: 0;
+  }
 }

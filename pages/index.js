@@ -6,24 +6,44 @@ import styles from "../styles/Home.module.css";
 
 export default function Home({ data }) {
   const [items, setItems] = useState(null);
+  const [local, setLocal] = useState(null);
+  const large = [0, 9, 15, 19, 20];
+  const small = [1, 2, 3, 6, 7, 8, 10, 11, 12, 16, 17, 18];
+
+  const checkIndex = (index) => {
+    if (large.includes(index)) return "large";
+    else if (small.includes(index)) return "small";
+    else return "medium";
+  };
+
   useEffect(() => {
-    setItems(JSON.stringify(localStorage.getItem("heart")));
-  }, []);
+    setLocal(JSON.stringify(localStorage.getItem("heart")));
+  }, [data]);
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Ajay Gupta</title>
         <meta name="description" content="Quotes by Ajay Gupta" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header>
-        <h1>Ajay Gupta</h1>
-      </header>
-      <main className={styles.main}>
-        {data.map((quote, index) => (
-          <Card key={index} data={quote} item={items} />
-        ))}
-      </main>
+      <div className={styles.hero}>
+        <h1>AJAY GUPTA</h1>
+        {/* <h1>{homepage.hero.title}</h1> */}
+      </div>
+      <div className={styles.container}>
+        <div className={styles.inner}>
+          <div className={styles.postFeed}>
+            {data.map((quote, index) => (
+              <Card
+                quote={quote}
+                key={index}
+                blogClass={checkIndex(index)}
+                local={local}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
