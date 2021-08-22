@@ -46,7 +46,14 @@
 
 .contact {
   height: 400px;
-  background-color: #684eda;
+  background-color: #3a54fd;
+  text-align: center;
+  padding: 50px;
+  color: rgba(255, 255, 255, 0.788);
+}
+
+.contact h3 {
+  color: #fff;
 }
 
 @media only screen and (max-width: 500px) {

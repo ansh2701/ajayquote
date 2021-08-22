@@ -47,7 +47,15 @@ export default function Home({ data }) {
           </div>
         </div>
       </div>
-      <div className={styles.contact}></div>
+      <div className={styles.contact}>
+        <h2>About</h2>
+        <p>Ajay Gupta</p>
+        <p>gupta.ajay000006@gmail.com</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit libero
+          dolores et est iusto sed voluptatum, voluptatem itaque minima quae.
+        </p>
+      </div>
       <Footer />
     </div>
   );
