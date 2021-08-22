@@ -131,14 +131,18 @@
 }
 
 .icons span {
-  margin: 0 2px;
+  margin-right: 5px;
+}
+
+.icons svg {
+  padding-top: 10px;
+  font-size: 25px;
 }
 
 @media only screen and (max-width: 500px) {
   .container {
     display: flex;
     flex-direction: column;
-    width: 95vw;
     min-height: 300px;
     margin: 0 0 10px;
   }
@@ -170,6 +174,7 @@
   .card__content .description {
     overflow: hidden;
     color: #92a3ab;
+    max-height: 4.5rem;
   }
   .description {
     margin-bottom: 8px;

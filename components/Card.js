@@ -1,7 +1,15 @@
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
-import { FaComment, FaEye, FaHeart, FaRegHeart, FaShare } from "react-icons/fa";
+import {
+  FaComment,
+  FaEye,
+  FaHeart,
+  FaRegCommentAlt,
+  FaRegEye,
+  FaRegHeart,
+  FaShare,
+} from "react-icons/fa";
 import styles from "../styles/CssCard.module.css";
 
 const Card = ({ quote, blogClass, local }) => {
@@ -92,11 +100,11 @@ const Card = ({ quote, blogClass, local }) => {
           </Link>
           <div className={styles.icons}>
             <div>
-              <FaEye />
+              <FaRegEye />
 
               <span>{quote.views}</span>
 
-              <FaComment />
+              <FaRegCommentAlt />
 
               <span>{quote.comments.length}</span>
             </div>

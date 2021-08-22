@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Card from "../components/Card";
 import styles from "../styles/Home.module.css";
+import Footer from "../components/Footer";
 
 export default function Home({ data }) {
   const [local, setLocal] = useState(null);
@@ -28,7 +29,8 @@ export default function Home({ data }) {
       </Head>
       {/* <Header /> */}
       <div className={styles.hero}>
-        <h1>AJAY GUPTA</h1>
+        <h3>AJAY GUPTA</h3>
+        <p>Finding Balance of the Life </p>
         {/* <h1>{homepage.hero.title}</h1> */}
       </div>
       <div className={styles.container}>
@@ -45,6 +47,8 @@ export default function Home({ data }) {
           </div>
         </div>
       </div>
+      <div className={styles.contact}></div>
+      <Footer />
     </div>
   );
 }

@@ -12,6 +12,8 @@ import {
   FaLinkedin,
   FaTelegram,
   FaTwitter,
+  FaRegEye,
+  FaRegCommentAlt,
 } from "react-icons/fa";
 // import { fetchAPI } from "../../lib/api";
 
@@ -20,6 +22,7 @@ import Image from "next/image";
 import styles from "../../styles/BlogPost.module.css";
 import Link from "next/link";
 import Comment from "../../components/Comment";
+import Footer from "../../components/Footer";
 
 const Quote = ({ quote }) => {
   // const [heart, setHeart] = useState(false);
@@ -57,11 +60,15 @@ const Quote = ({ quote }) => {
       {/* // <Layout>
     //   <Seo seo={seo} slug={quote.id} /> */}
       <div className={styles.container}>
-        <header className={styles.header}>
-          {/* <div className={styles.header__content}>
-           */}
-        </header>
-
+        <Link href="/">
+          <a>
+            <div className={styles.hero}>
+              <h3>AJAY GUPTA</h3>
+              <p>Finding Balance of the Life </p>
+              {/* <h1>{homepage.hero.title}</h1> */}
+            </div>
+          </a>
+        </Link>
         <main className={styles.container__main}>
           <article className={styles.container__middle}>
             <div className={styles.cardProfile}>
@@ -97,11 +104,11 @@ const Quote = ({ quote }) => {
             </div>
             <div className={styles.icons}>
               <div>
-                <FaEye />
+                <FaRegEye />
 
                 <span>{quote.views}</span>
 
-                <FaComment />
+                <FaRegCommentAlt />
 
                 <span>{quote.comments.length}</span>
               </div>
@@ -174,6 +181,7 @@ const Quote = ({ quote }) => {
             <Comment comments={quote.comments} />
           </div>
         </footer>
+        <Footer />
       </div>
     </>
   );
