@@ -4,8 +4,8 @@
   margin: 0;
   padding: 1vw 0vw 3vw;
   align-items: center;
-  /* background-color: #000; */
-  background-color: #fff;
+  /* color: #000; */
+  /* background-color: #fff; */
 }
 .hero h1 {
   text-align: center;
@@ -15,7 +15,7 @@
 }
 
 .container {
-  background-color: #fff;
+  /* background-color: #fff; */
   /* background-color: #191b1f; */
   flex-grow: 1;
   justify-content: center;
@@ -50,7 +50,7 @@
   .hero h1 {
     text-align: center;
     font-size: 3rem;
-    color: #fff;
+    color: #000;
     margin: 0;
   }
 }
