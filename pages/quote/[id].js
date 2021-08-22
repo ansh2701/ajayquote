@@ -19,7 +19,7 @@ import Image from "next/image";
 // import Seo from "../../components/seo";
 import styles from "../../styles/BlogPost.module.css";
 import Link from "next/link";
-import Comment from "../../components/comment";
+import Comment from "../../components/Comment";
 
 const Quote = ({ quote }) => {
   // const [heart, setHeart] = useState(false);
