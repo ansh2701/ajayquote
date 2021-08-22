@@ -1,11 +1,11 @@
 import Head from "next/head";
 // import Image from "next/image";
 import { useState, useEffect } from "react";
+import Header from "../components/Header";
 import Card from "../components/Card";
 import styles from "../styles/Home.module.css";
 
 export default function Home({ data }) {
-  const [items, setItems] = useState(null);
   const [local, setLocal] = useState(null);
   const large = [0, 9, 15, 19, 20];
   const small = [1, 2, 3, 6, 7, 8, 10, 11, 12, 16, 17, 18];
@@ -26,6 +26,7 @@ export default function Home({ data }) {
         <meta name="description" content="Quotes by Ajay Gupta" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      {/* <Header /> */}
       <div className={styles.hero}>
         <h1>AJAY GUPTA</h1>
         {/* <h1>{homepage.hero.title}</h1> */}

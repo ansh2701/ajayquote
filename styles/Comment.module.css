@@ -1,0 +1,124 @@
+.container {
+  flex-grow: 1;
+  max-width: 820px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: 1px solid #000;
+}
+
+.heading {
+  border-bottom: 0.5px solid rgb(51, 51, 51);
+
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.heading h3 {
+  margin: 0;
+  /* margin: 1rem 0; */
+}
+
+.write {
+  display: flex;
+  margin-top: 10px;
+}
+
+.write .text textarea {
+  float: left;
+  width: 100%;
+  height: auto;
+  min-height: 150px;
+  outline: none;
+}
+.write .text {
+  width: 80%;
+  margin-left: 1rem;
+}
+
+.write input {
+  outline: none;
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+.write .btn {
+  float: right;
+  margin: 5px 0;
+}
+
+.write button {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+  background: rgb(0, 172, 238);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 172, 238, 1) 0%,
+    rgba(2, 126, 251, 1) 100%
+  );
+  border: none;
+}
+
+.avatar .img2 {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.profile {
+  margin: 0;
+
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+}
+
+.profileName {
+  margin: 0;
+  color: hsla(0, 6%, 10%, 0.75);
+  font-size: 0.9rem;
+}
+.profileDate {
+  margin: 0;
+  color: #92a3ab;
+  font-size: 0.7rem;
+}
+
+.comment {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.section {
+  width: 80%;
+  margin-left: 1rem;
+}
+
+.reply {
+  margin-left: 50px;
+  margin-top: 1rem;
+}
+
+.icons {
+  display: flex;
+}
+
+.icons div {
+  margin: 0 5px;
+  cursor: pointer;
+}

@@ -37,14 +37,15 @@
 }
 
 .cardProfile .img2 {
-  height: 50px;
-  width: 50px;
+  height: 30px;
+  width: 30px;
   border-radius: 50%;
 }
 
 .cardProfileInfo {
   margin: 0;
   margin-left: 5px;
+  display: flex;
   letter-spacing: 0.2px;
   text-transform: uppercase;
 }
@@ -56,16 +57,16 @@
 }
 .profileDate {
   margin: 0;
+  margin-left: 2px;
   color: #92a3ab;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
 }
 
 .cover__wrapper {
   max-width: 820px;
+  margin-top: 2rem;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 18px;
-  padding-right: 18px;
 }
 
 .cover__image {
@@ -80,23 +81,18 @@
 
   /* Layout the left sidebar, main content and right sidebar */
   display: flex;
-  flex-direction: row;
-}
 
-.container__left {
-  width: 20%;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .container__middle {
   /* Take the remaining width */
   flex-grow: 1;
   max-width: 820px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
 
-.container__right {
-  width: 20%;
+  border: 1px solid #000;
+  padding: 0 5vw;
 }
 
 .container__middle iframe {
@@ -120,17 +116,32 @@
 .shareContainer {
   display: flex;
   justify-content: center;
-  margin-top: 37px;
+  margin: 20px 0;
 }
 
 .shareBox {
   margin-left: 20px;
 }
 
+.comments {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.icons {
+  margin-top: 10px;
+  /* border-top: 1px solid #000; */
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+}
+
 @media screen and (max-width: 500px) {
   .header__content h1 {
     font-size: 32px;
     line-height: 1.17;
+    color: black;
     margin: 0;
   }
   .container__middle {
@@ -138,5 +149,6 @@
     max-width: 820px;
     padding-left: 10px;
     padding-right: 10px;
+    margin: 10px;
   }
 }

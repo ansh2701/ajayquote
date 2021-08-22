@@ -47,9 +47,7 @@ function Header() {
           >
             <li className={styles.navitem}>
               <Link href="/">
-                <a className={styles.navlinks} onClick={closeMobileMenu}>
-                  Blog
-                </a>
+                <a className={styles.navlinks} onClick={closeMobileMenu}></a>
               </Link>
             </li>
             <li className={styles.navitem}>
@@ -61,9 +59,7 @@ function Header() {
             </li>
             <li className={styles.navitem}>
               <Link href="/tweet">
-                <a className={styles.navlinks} onClick={closeMobileMenu}>
-                  Tweets/Reddit
-                </a>
+                <a className={styles.navlinks} onClick={closeMobileMenu}></a>
               </Link>
             </li>
           </ul>

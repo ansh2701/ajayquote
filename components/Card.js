@@ -1,14 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
-import {
-  FaComment,
-  FaEye,
-  FaHeart,
-  FaQuoteLeft,
-  FaRegHeart,
-  FaShare,
-} from "react-icons/fa";
+import { FaComment, FaEye, FaHeart, FaRegHeart, FaShare } from "react-icons/fa";
 import styles from "../styles/CssCard.module.css";
 
 const Card = ({ quote, blogClass, local }) => {
@@ -91,21 +84,13 @@ const Card = ({ quote, blogClass, local }) => {
             <FaShare className={styles.share} />
             {/* </div> */}
           </div>
-          <Link href={`/blog/${quote.id}`}>
+          <Link href={`/quote/${quote.id}`}>
             <a onClick={handleChange}>
               <p className={styles.description}>{quote.desc}</p>
               <span className={styles.title}>{quote.category.name}</span>
             </a>
           </Link>
           <div className={styles.icons}>
-            {/* {heart ? (
-                <FaHeart style={{ color: "red" }} />
-              ) : (
-                <FaRegHeart
-                  onClick={heart || handleClick}
-                  style={{ color: "red" }}
-                />
-              )} */}
             <div>
               <FaEye />
 
