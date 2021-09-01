@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { FaTimes, FaBars } from "react-icons/fa";
+import { FaTimes, FaBars, FaQuoteLeft } from "react-icons/fa";
 import Image from "next/image";
 import styles from "../styles/Header.module.css";
 
@@ -30,14 +30,19 @@ function Header() {
         <div className={styles.container}>
           <Link href="/">
             <a className={styles.logo} onClick={closeMobileMenu}>
-              <Image
+              {/* <Image
                 src="https://res.cloudinary.com/mrxox/image/upload/v1627475987/logo_784685d0ba.png"
                 height={60}
                 width={60}
                 alt="Dalal Times"
-              />
+              /> */}
+              <FaQuoteLeft />
             </a>
           </Link>
+          <div className={styles.hero}>
+            <h3>Ajay Gupta</h3>
+            <p>Finding Balance of the Life </p>
+          </div>
 
           <div className={styles.menuicon} onClick={handleClick}>
             {click ? <FaTimes /> : <FaBars />}
@@ -47,19 +52,16 @@ function Header() {
           >
             <li className={styles.navitem}>
               <Link href="/">
-                <a className={styles.navlinks} onClick={closeMobileMenu}></a>
+                <a className={styles.navlinks} onClick={closeMobileMenu}>
+                  Home
+                </a>
               </Link>
             </li>
             <li className={styles.navitem}>
               <Link href="/news">
                 <a className={styles.navlinks} onClick={closeMobileMenu}>
-                  News
+                  Instagram
                 </a>
-              </Link>
-            </li>
-            <li className={styles.navitem}>
-              <Link href="/tweet">
-                <a className={styles.navlinks} onClick={closeMobileMenu}></a>
               </Link>
             </li>
           </ul>

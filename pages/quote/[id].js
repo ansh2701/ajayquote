@@ -23,6 +23,7 @@ import styles from "../../styles/BlogPost.module.css";
 import Link from "next/link";
 import Comment from "../../components/Comment";
 import Footer from "../../components/Footer";
+import Header from "../../components/Header";
 
 const Quote = ({ quote }) => {
   // const [heart, setHeart] = useState(false);
@@ -60,15 +61,7 @@ const Quote = ({ quote }) => {
       {/* // <Layout>
     //   <Seo seo={seo} slug={quote.id} /> */}
       <div className={styles.container}>
-        <Link href="/">
-          <a>
-            <div className={styles.hero}>
-              <h3>AJAY GUPTA</h3>
-              <p>Finding Balance of the Life </p>
-              {/* <h1>{homepage.hero.title}</h1> */}
-            </div>
-          </a>
-        </Link>
+        <Header />
         <main className={styles.container__main}>
           <article className={styles.container__middle}>
             <div className={styles.cardProfile}>
@@ -128,7 +121,7 @@ const Quote = ({ quote }) => {
           <div className={styles.shareContainer}>
             <div>
               <Link
-                href={`http://www.facebook.com/sharer.php?u=https://thedalaltimes.com/${quote.id}`}
+                href={`http://www.facebook.com/sharer.php?u=https://ajaygupta.netlify.app/${quote.id}`}
                 passHref
               >
                 <a
@@ -140,7 +133,7 @@ const Quote = ({ quote }) => {
                 </a>
               </Link>
               <Link
-                href={`http://twitter.com/share?url=https://thedalaltimes.com/${quote.id}`}
+                href={`http://twitter.com/share?url=https://ajaygupta.netlify.app/${quote.id}`}
                 passHref
               >
                 <a
@@ -152,7 +145,7 @@ const Quote = ({ quote }) => {
                 </a>
               </Link>
               <Link
-                href={`https://www.linkedin.com/sharing/share-offsite/?url=https://thedalaltimes.com/${quote.id}`}
+                href={`https://www.linkedin.com/sharing/share-offsite/?url=https://ajaygupta.netlify.app/${quote.id}`}
                 passHref
               >
                 <a
@@ -164,7 +157,7 @@ const Quote = ({ quote }) => {
                 </a>
               </Link>
               <Link
-                href={`https://telegram.me/share/url?url=https://thedalaltimes.com/${quote.id}`}
+                href={`https://telegram.me/share/url?url=https://ajaygupta.netlify.app/${quote.id}`}
                 passHref
               >
                 <a

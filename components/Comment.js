@@ -73,33 +73,55 @@ const Box = ({ c, rep = false }) => {
           )}
         </div>
       </div>
-      {write && <Write />}
+      {write && <Write replies={c.reply} comId={c.id} />}
     </>
   );
 };
 
-const Write = ({ rep = false, id }) => {
+const Write = ({ rep = false, id, replies, comId }) => {
   const [name, setName] = useState("");
   const [text, setText] = useState("");
 
   const handleSubmit = async () => {
-    const values = {
-      name: name,
-      comment: text,
-      quote: id,
-    };
-    const res = await fetch(
-      `https://pacific-beyond-38163.herokuapp.com/comments`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(values),
+    if (rep) {
+      const values = {
+        name: name,
+        comment: text,
+        quote: id,
+      };
+      const res = await fetch(
+        `https://pacific-beyond-38163.herokuapp.com/comments`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(values),
+        }
+      );
+      if (!res.ok) {
+        console.log("went wrong");
       }
-    );
-    if (!res.ok) {
-      console.log("went wrong");
+    } else {
+      const values = {
+        name: name,
+        reply: text,
+      };
+      console.log(replies);
+      const val = replies.push(values);
+      const res = await fetch(
+        `https://pacific-beyond-38163.herokuapp.com/comments/${comId}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ reply: replies }),
+        }
+      );
+      if (!res.ok) {
+        console.log("went wrong");
+      }
     }
   };
 

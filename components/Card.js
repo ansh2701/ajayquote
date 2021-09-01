@@ -89,7 +89,12 @@ const Card = ({ quote, blogClass, local }) => {
             </div>
 
             {/* <div className={styles.share}> */}
-            <FaShare className={styles.share} />
+            <Link href={`/quote/${quote.id}`}>
+              <a className={styles.share}>
+                <FaShare />
+              </a>
+            </Link>
+
             {/* </div> */}
           </div>
           <Link href={`/quote/${quote.id}`}>

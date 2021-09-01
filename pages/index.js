@@ -27,12 +27,8 @@ export default function Home({ data }) {
         <meta name="description" content="Quotes by Ajay Gupta" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <Header /> */}
-      <div className={styles.hero}>
-        <h3>Ajay Gupta</h3>
-        <p>Finding Balance of the Life </p>
-        {/* <h1>{homepage.hero.title}</h1> */}
-      </div>
+      <Header />
+
       <div className={styles.container}>
         <div className={styles.inner}>
           <div className={styles.postFeed}>
